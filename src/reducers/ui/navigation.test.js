@@ -1,7 +1,7 @@
 import reducer from './navigation'
 import NavigationActionTypes from '../../types/ui/navigation';
 
-describe('navigation', () => {
+describe('ui/navigation Reducer', () => {
     const NEW_PAGE = 'NEW_PAGE'
 
     it('should return the initial state', () => {

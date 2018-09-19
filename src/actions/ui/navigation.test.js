@@ -1,7 +1,7 @@
 import { goToPage } from './navigation'
 import NavigationActionTypes from '../../types/ui/navigation'
 
-describe('navigation', () => {
+describe('ui/navigation Actions', () => {
     const PAGE = 'myPage'
 
     it('should return a go to page action', () => {
