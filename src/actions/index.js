@@ -1,5 +1,5 @@
-import NavigationActions from './ui/navigation'
+import * as ui from './ui'
 
 export {
-    NavigationActions
+    ui
 }
