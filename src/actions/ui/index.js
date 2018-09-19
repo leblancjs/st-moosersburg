@@ -1,4 +1,4 @@
-import NavigationActions from './navigation'
+import * as NavigationActions from './navigation'
 
 export {
     NavigationActions

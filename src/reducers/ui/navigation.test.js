@@ -1,5 +1,5 @@
 import reducer from './navigation'
-import { NavigationActions } from '../../actions/ui/navigation';
+import NavigationActionTypes from '../../types/ui/navigation';
 
 describe('navigation', () => {
     const NEW_PAGE = 'NEW_PAGE'
@@ -30,7 +30,7 @@ describe('navigation', () => {
             reducer(
                 undefined,
                 {
-                    type: NavigationActions.GO_TO_PAGE,
+                    type: NavigationActionTypes.GO_TO_PAGE,
                     page: NEW_PAGE
                 }
             )

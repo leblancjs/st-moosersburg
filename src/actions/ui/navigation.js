@@ -1,14 +1,10 @@
-const NavigationActions = {
-    GO_TO_PAGE: 'GO_TO_PAGE'
-}
+import NavigationActionTypes from '../../types/ui/navigation'
 
 const goToPage = (page) => ({
-    type: NavigationActions.GO_TO_PAGE,
+    type: NavigationActionTypes.GO_TO_PAGE,
     page
 })
 
-export { NavigationActions }
-
-export default {
+export {
     goToPage
 }

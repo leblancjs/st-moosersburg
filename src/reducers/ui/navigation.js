@@ -1,4 +1,4 @@
-import { NavigationActions } from '../../actions/ui/navigation'
+import NavigationActionTypes from '../../types/ui/navigation'
 
 const initialState = {
     currentPage: ''
@@ -6,7 +6,7 @@ const initialState = {
 
 const navigation = (state = initialState, action) => {
     switch (action.type) {
-        case NavigationActions.GO_TO_PAGE:
+        case NavigationActionTypes.GO_TO_PAGE:
             return {
                 ...state,
                 currentPage: action.page
