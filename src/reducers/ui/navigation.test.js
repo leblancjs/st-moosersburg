@@ -1,9 +1,7 @@
 import reducer from './navigation'
-import NavigationActionTypes from '../../types/ui/navigation';
+import { NavigationActions } from '../../actions/ui'
 
 describe('ui/navigation Reducer', () => {
-    const NEW_PAGE = 'NEW_PAGE'
-
     it('should return the initial state', () => {
         expect(
             reducer(undefined, {})
@@ -26,13 +24,12 @@ describe('ui/navigation Reducer', () => {
     })
 
     it('should return the new state with the new current page', () => {
+        const NEW_PAGE = 'NEW_PAGE'
+
         expect(
             reducer(
                 undefined,
-                {
-                    type: NavigationActionTypes.GO_TO_PAGE,
-                    page: NEW_PAGE
-                }
+                NavigationActions.goToPage(NEW_PAGE)
             )
         ).toEqual({
             currentPage: NEW_PAGE
