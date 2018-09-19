@@ -21,10 +21,16 @@ const setCreatorFilter = (creator) => ({
     creator
 })
 
+const selectGame = (gameId) => ({
+    type: GamesActionTypes.SELECT_GAME,
+    gameId
+})
+
 export {
     openFiltersPanel,
     closeFiltersPanel,
     togglePublicVisibilityFilter,
     togglePrivateVisibilityFilter,
-    setCreatorFilter
+    setCreatorFilter,
+    selectGame
 }

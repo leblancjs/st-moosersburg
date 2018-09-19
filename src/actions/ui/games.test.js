@@ -1,4 +1,4 @@
-import { openFiltersPanel, closeFiltersPanel, togglePublicVisibilityFilter, togglePrivateVisibilityFilter, setCreatorFilter } from './games'
+import { openFiltersPanel, closeFiltersPanel, togglePublicVisibilityFilter, togglePrivateVisibilityFilter, setCreatorFilter, selectGame } from './games'
 import GamesActionTypes from '../../types/ui/games'
 
 describe('ui/games Actions', () => {
@@ -42,6 +42,17 @@ describe('ui/games Actions', () => {
         ).toEqual({
             type: GamesActionTypes.SET_CREATOR_FILTER,
             creator: CREATOR
+        })
+    })
+
+    it('selectGame', () => {
+        const GAME_ID = 'myGameId'
+
+        expect(
+            selectGame(GAME_ID)
+        ).toEqual({
+            type: GamesActionTypes.SELECT_GAME,
+            gameId: GAME_ID
         })
     })
 })
